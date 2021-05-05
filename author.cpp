@@ -1,13 +1,17 @@
 #include <iostream>
+#include <fstream>
 #include "author.h"
 
 using namespace std;
 using namespace writer;
-void writer::Author::write(){
-    cout << "writing\n";
+// std::map for branching choices
+
+/* initialize the datastructure */
+
+/* make choices about what to include */
+
+/* write to the file */
+void writer::Author::write(std::string in){
+    cout << "I've always wanted to work at " << in << "!\n";
 }
 
-
-// primary data structure lives here
-
-// helper functions for each step of the process

@@ -4,7 +4,9 @@
 using namespace std;
 
 int main(){
-    cout << "Hello Employer!\n";
+    std::string input = "";
+    cout << "Hello Potential Employer!  What's the name of the company do you want to recruit me into?\n";
+    cin >> input;
     writer::Author a;
-    a.write();
+    a.write(input);
 }
