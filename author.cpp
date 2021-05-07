@@ -11,7 +11,8 @@ using namespace writer;
 /* make choices about what to include */
 
 /* write to the file */
-void writer::Author::write(std::string in){
-    cout << "I've always wanted to work at " << in << "!\n";
+void writer::Author::write(writer::Author a){
+
+    cout << a.letter;
 }
 

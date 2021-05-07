@@ -13,4 +13,5 @@ int main(){
     }
     writer::Author a;
     a.write(input);
+    cout << "I've always wanted to work at " << in << "!\n";
 }
