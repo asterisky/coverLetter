@@ -36,9 +36,12 @@ int main(){
         std::getline(std::cin, input);
     }
     postingSource = postingSource + input;
+    
+    cout << "\n\n*************************\n Generating Cover Letter \n*************************\n\n\n\n";
 
     writer::Author* a = new writer::Author(companyName, positionName, postingSource);
     
     (*a).write(a);
     
+    cout << "\n\n\n\n";
 }
