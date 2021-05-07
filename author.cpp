@@ -11,8 +11,8 @@ using namespace writer;
 /* make choices about what to include */
 
 /* write to the file */
-void writer::Author::write(writer::Author a){
+void writer::Author::write(writer::Author* a){
 
-    cout << a.letter;
+    cout << a->letter;
 }
 
