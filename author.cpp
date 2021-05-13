@@ -12,7 +12,9 @@ using namespace writer;
 
 /* write to the file */
 void writer::Author::write(writer::Author* a){
-
-    cout << a->letter;
+    std::fstream file;
+    file.open("PizzikettiCoverLetter");
+    file << a->letter;
+    file.close();
 }
 
