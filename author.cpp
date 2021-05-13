@@ -4,17 +4,14 @@
 
 using namespace std;
 using namespace writer;
-// std::map for branching choices
-
-/* initialize the datastructure */
-
-/* make choices about what to include */
 
 /* write to the file */
 void writer::Author::write(writer::Author* a){
-    std::fstream file;
-    file.open("PizzikettiCoverLetter");
-    file << a->letter;
+    std::fstream file("PizzikettiCoverLetter.txt", std::fstream::out);
+    if(file.is_open()){
+        file << a->letter;
+    }
+    cout << a->letter;
     file.close();
 }
 
