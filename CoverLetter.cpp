@@ -8,6 +8,7 @@ int main(){
     std::string companyName = "";
     std::string positionName = "";
     std::string postingSource = "";
+    bool typeOfPostion;
     cout << "Hello Potential Employer!  What's the name of the company do you want to recruit me into?\n";
 
     // get company name
@@ -37,9 +38,21 @@ int main(){
     }
     postingSource = postingSource + input;
     
+    // type of position
+    cout << "Is it more important to have programming or leadership skills in this role?\nc - coding/programming skills\nl - leadership/management skills\n";
+    std::getline(std::cin, input);
+    while(input.std::string::empty() || (input.std::string::front() != 'c' && input.std::string::front() != 'l')){
+        cout << "Please enter c for coding or l for leadership.\n";
+        std::getline(std::cin, input);
+    }
+    if(input.std::string::front() == 'l'){
+        typeOfPostion = true;
+    }
+    else typeOfPostion = false;
+
     cout << "\n\n*************************\n Generating Cover Letter \n*************************\n\n\n\n";
 
-    writer::Author* a = new writer::Author(companyName, positionName, postingSource);
+    writer::Author* a = new writer::Author(companyName, positionName, postingSource, typeOfPostion);
     
     (*a).write(a);
     
